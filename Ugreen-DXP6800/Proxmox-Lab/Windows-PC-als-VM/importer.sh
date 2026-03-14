@@ -41,7 +41,7 @@ qm set $VMID --tpmstate0 $STORAGE:0,version=v2.0
 # 3. CD-ROM
 if [ -z "$ISOPATH" ]; then
     echo "[2/4] Füge leeres CD-ROM Laufwerk hinzu..."
-    qm set $VMID --ide2 media=cdrom
+    qm set $VMID --ide2 none,media=cdrom
 else
     echo "[2/4] Lege ISO $ISOPATH ein..."
     qm set $VMID --ide2 $ISOPATH,media=cdrom
